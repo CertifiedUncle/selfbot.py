@@ -90,19 +90,19 @@ class Selfbot(commands.Bot):
         '''Returns your token wherever it is'''
         with open('data/config.json') as f:
             config = json.load(f)
-            if config.get('TOKEN') == "your_token_here":
-                if not os.environ.get('TOKEN'):
+            if config.get('TOKEN') == "NzU4NDg3MjM3MDc5MzM0OTEz.X2vqoA.9pputH07r_Qm3bU0TvYef3OwJzY":
+                if not os.environ.get('NzU4NDg3MjM3MDc5MzM0OTEz.X2vqoA.9pputH07r_Qm3bU0TvYef3OwJzY'):
                     self.run_wizard()
             else:
-                token = config.get('TOKEN').strip('\"')
-        return os.environ.get('TOKEN') or token
+                token = config.get('NzU4NDg3MjM3MDc5MzM0OTEz.X2vqoA.9pputH07r_Qm3bU0TvYef3OwJzY').strip('\"')
+        return os.environ.get('NzU4NDg3MjM3MDc5MzM0OTEz.X2vqoA.9pputH07r_Qm3bU0TvYef3OwJzY') or token
 
     @staticmethod
     async def get_pre(bot, message):
         '''Returns the prefix.'''
         with open('data/config.json') as f:
-            prefix = json.load(f).get('PREFIX')
-        return os.environ.get('PREFIX') or prefix or 'r.'
+            prefix = json.load(f).get('x')
+        return os.environ.get('x') or prefix or 'r.'
 
     def restart(self):
         os.execv(sys.executable, ['python'] + sys.argv)
@@ -115,8 +115,8 @@ class Selfbot(commands.Bot):
         print('------------------------------------------')
         prefix = input('Enter a prefix for your selfbot:\n> ')
         data = {
-                "TOKEN" : token,
-                "PREFIX" : prefix,
+                "TOKEN" : NzU4NDg3MjM3MDc5MzM0OTEz.X2vqoA.9pputH07r_Qm3bU0TvYef3OwJzY,
+                "PREFIX" : x,
             }
         with open('data/config.json','w') as f:
             f.write(json.dumps(data, indent=4))
